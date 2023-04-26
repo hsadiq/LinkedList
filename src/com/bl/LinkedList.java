@@ -28,6 +28,5 @@ public class LinkedList {
             System.out.println(n.data + " ");
              n = n.next;
         }
-
     }
 }
