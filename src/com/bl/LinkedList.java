@@ -14,9 +14,9 @@ public class LinkedList {
         System.out.println("Welcome To Linked List Programme");
         LinkedList list = new LinkedList();
 
-        list.Head= new Node(56);
+        list.Head= new Node(70);
         Node Second = new Node(30);
-        Node Third = new Node(70);
+        Node Third = new Node(56);
 
         list.Head.next = Second;
         Second.next = Third;
