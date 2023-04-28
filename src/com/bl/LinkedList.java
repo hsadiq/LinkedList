@@ -11,6 +11,32 @@ public class LinkedList<T> {
         Head = Nd;
     }
 
+    public void pop(T key) {
+        if (Head == null) {
+            return;
+        }
+
+        if (Head.data == key) {
+            Head = Head.next;
+            return;
+        }
+
+        Node prev = null;
+        Node current = Head;
+
+        while (current != null && current.data != key) {
+            prev = current;
+            current = current.next;
+        }
+
+        if (current == null) {
+            return;
+        }
+
+        prev.next = current.next;
+    }
+
+
     public void printList(){
         Node<T> present = Head;
         while (present != null){
@@ -25,6 +51,8 @@ public class LinkedList<T> {
         list.addFirst(56);
         list.addFirst(30);
         list.addFirst(70);
+
+        list.pop(56);
 
         list.printList();
 
